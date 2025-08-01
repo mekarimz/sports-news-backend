@@ -74,6 +74,10 @@ def convert_to_ist(published_time):
     except:
         return ""
 
+@app.route('/')
+def index():
+    return jsonify({"message": "Sports API is running", "endpoint": "/news"})
+
 @app.route('/news')
 def get_news():
     all_entries = []
